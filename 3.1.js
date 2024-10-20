@@ -37,6 +37,9 @@ let arrayWithContents = ["Strings", "inside", "an", "array"];
 
 //The array contents can be accessed using the bracket notation (indices start from 0):
 arrayWithContents[1]; // "inside"
+
+// create a copy of an array using the same spread syntax as for objects: 
+// let newArray = [...oldArray]. Remember that this will again create a shallow copy of the array
 /*
 //The traditional method of iterating over an array is to use a for loop:
 for (let i=0; i<arrayWithContents.length; i++) {
@@ -75,7 +78,7 @@ reduce
     Reduce the array into a scalar value by using a reducer
 
 */
-
+/*
 
 let item  = "an";
 let filteredArray = arrayWithContents.filter(val => val !== item);
@@ -95,4 +98,43 @@ let contacts = [
     }
 ]
 
-aaa
+let numbers = contacts.map(contact => contact.number);
+
+let grades = [5,5,2,4,5,3]
+let sum = grades.reduce((acc, val) => acc+val);
+
+*/
+// Define numbers to be an array that 
+// contains positive even integers up to (and including) ten.
+
+let numbers;
+numbers = [2,4,6,8,10];
+
+// Define notes to be an array that contains 7 "note arrays" 
+// that are pairs of note pitch and it's length, e.g. ["C5","8n"]. 
+// The array must first have four sixteenth (16n) notes A4, B4, C#4, A4. 
+// Then, TWICE the eighth (8n) note E5. And finally, the half (2n) note C#4.
+let notes;
+notes = [["A4","16n"],["B4","16n"],["C#4","16n"],["A4","16n"],["E5","8n"],["E5","8n"],["C#4","2n"]];
+
+// Your task is to define an object to the variable myStuff. 
+// It should have the following keys fruit, amount, and pinCode. 
+// The keys should have the following values (in corresponding order):
+// 'apple', 3, and [1,2,3,4]
+let myStuff = {
+    fruit: 'apple',
+    amount: 3,
+    pinCode: [1,2,3,5]
+};
+
+//  The following JavaScript-function should calculate the sum of all integers given as an array. 
+// There seems to be an error and your task is to fix the function.
+function arraySum(arr) {
+    var s = 0;
+    for (var i = 1; i <= arr.length; i++) {
+      s += i;
+    }
+    return s;
+  }
+  
+  console.log(arraySum(myStuff.pinCode))
